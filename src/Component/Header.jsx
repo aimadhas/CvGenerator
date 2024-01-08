@@ -7,7 +7,7 @@ export default function Header() {
       <div className="flex gap-12 px-5">
         <a href="" className="font-semibold">About</a>
         <a href="" className="font-semibold">contact</a>
-        <a href="" className="font-semibold">Founders</a>
+        <a href="https://react-project-ochre-rho.vercel.app/" className="font-semibold">Founders</a>
       </div>
     </div>
   )

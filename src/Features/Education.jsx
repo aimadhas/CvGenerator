@@ -96,7 +96,7 @@ function Submit() {
         findateyrs: '',
         Description: '',
     });
-
+    setaddpresent(false)
 }
 
 useEffect(() => {
@@ -304,7 +304,7 @@ setshowmodifatelist(false)
         <div className="flex justify-between items-center">
         <label>Finish date</label>
         <div className="flex items-center gap-1">
-            <input type="checkbox" onChange={AddPresentword} capture={data1.findatemnt == 'present'} />
+            <input type="checkbox" onChange={AddPresentword} checked={addpresent == true} />
             <p>present</p>
         </div>
             </div>

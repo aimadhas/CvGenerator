@@ -18,7 +18,7 @@ export default function Skills({setskills,setskills1,skils}) {
     const niveauRef = useRef(null);
     const [data1,setdata1]= useState({
         Skill:'',
-        niveau:''
+        niveau:'Beginner'
     })
     function chnageIcon1(){
         if(arrow1 == false){

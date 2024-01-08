@@ -17,7 +17,7 @@ export default function Languages({setlangue,setlangue1,langue}) {
     const niveauRef = useRef(null);
     const [data1,setdata1]= useState({
         langue:'',
-        niveau:''
+        niveau:'Beginner'
     })
 
 
