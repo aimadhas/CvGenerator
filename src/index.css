@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Round&family=Roboto+Mono:wght@500&family=Work+Sans&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.shadowa{
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+body{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.bg2{
+  background-image: url(./assets/Rectangle4.png);
+  background-size: cover;
+  font-family: 'Nova Round', system-ui;
+}
