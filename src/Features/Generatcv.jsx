@@ -24,7 +24,7 @@ export default function Generatcv({setshowcv}) {
     const cvComponentRef = useRef(null);
   return (
 <div className="w-full h-screen">
-<Header2 setshowcv={setshowcv} cvComponentRef={cvComponentRef}></Header2>
+<Header2 setshowcv={setshowcv} cvComponentRef={cvComponentRef} personalData={personalData}></Header2>
     <div className='flex gap-3 h-[88%]'>
         <div className='w-[50%] h-full flex flex-col gap-5 py-5 px-6 overflow-y-auto'>
         <PersonalInfo setPersonalData={setPersonalData} setcolor={setcolor}></PersonalInfo>

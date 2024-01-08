@@ -87,7 +87,7 @@ export default function CV({personalData,education,education2,skils1,skils,langu
       {/*fin div for education */}
          {/*div for expirience */}
          <div className='my-2'>
-        <h1 className='text-[20px]' style={{color:color}}>Work expirience</h1>
+        <h1 className='text-[20px]' style={{color:color}}>Work Experience</h1>
         <div>
         {expirence.map((education, index) => (
               <div key={index}>

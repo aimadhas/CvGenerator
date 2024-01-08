@@ -2,7 +2,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import DownloadIcon from '@mui/icons-material/Download';
 import ReactToPrint from 'react-to-print';
 
-export default function Header2({ setshowcv, cvComponentRef }) {
+export default function Header2({ setshowcv, cvComponentRef,personalData }) {
 
     const component = cvComponentRef.current;
 
@@ -13,7 +13,7 @@ export default function Header2({ setshowcv, cvComponentRef }) {
         <ArrowBackIcon />
         <p>Return</p>
       </button>
-      <h1 className='text-[20px] font-bold'>Resume name prenom</h1>
+      <h1 className='text-[20px] font-bold'>Resume {personalData.nom} {personalData.prenom}</h1>
       <ReactToPrint
   trigger={() => (
     <button className='font-bold py-3 px-5 rounded-lg bg-[#4314b6] flex gap-4'>
