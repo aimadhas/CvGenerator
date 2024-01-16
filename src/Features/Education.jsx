@@ -1,10 +1,10 @@
-import { useEffect, useState,useRef } from "react"
+import { useEffect, useState,useRef,useMemo } from "react"
 import img from '../assets/4.png'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import DoneIcon from '@mui/icons-material/Done';
+import useDocumentTitle from "../useDocumentTitle";
 import EditIcon from '@mui/icons-material/Edit';
-import { data } from "autoprefixer";
-import { Filter } from "@mui/icons-material";
+
 
 export default function Education({seteducation,seteducation2,education}) {
     const [arrow1,setarrow] = useState(false)
@@ -32,7 +32,7 @@ export default function Education({seteducation,seteducation2,education}) {
     })
 const [data2,setdata2] = useState({})
 
-
+useDocumentTitle('Education');
     function chnageIcon1(){
         if(arrow1 == false){
             setarrow(true)
@@ -63,9 +63,17 @@ const [data2,setdata2] = useState({})
         seteducation2(data1)
     },[data1])
 
-
+    const orderedListData = useMemo(() => {
+        const sortedListData = [...listdata1].sort((a, b) => {
+          const startDateA = new Date(`${a.stardatemnt} ${a.stardateyrs}`);
+          const startDateB = new Date(`${b.stardatemnt} ${b.stardateyrs}`);
+          return startDateB - startDateA;
+        });
+        return sortedListData;
+      }, [listdata1]);
+    //   setlistdata1(orderedListData)
     useEffect(() => {
-        seteducation(listdata1);
+        seteducation(orderedListData);
     }, [listdata1, seteducation]);
     
 

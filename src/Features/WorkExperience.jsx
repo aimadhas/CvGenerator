@@ -5,6 +5,8 @@ import DoneIcon from '@mui/icons-material/Done';
 import EditIcon from '@mui/icons-material/Edit';
 import { data } from "autoprefixer";
 import { Filter } from "@mui/icons-material";
+import useDocumentTitle from "../useDocumentTitle";
+
 
 export default function WorkExperience({setexpirence,setexpirence2,expirence}) {
     const [arrow1,setarrow] = useState(false)
@@ -31,7 +33,7 @@ export default function WorkExperience({setexpirence,setexpirence2,expirence}) {
         Description:'',
     })
 const [data2,setdata2] = useState({})
-
+useDocumentTitle('Experience')
 
     function chnageIcon1(){
         if(arrow1 == false){

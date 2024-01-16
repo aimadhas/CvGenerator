@@ -2,9 +2,10 @@ import { useState } from 'react'
 import Header from './Component/Header'
 import Section1 from './Component/Section1'
 import Generatcv from './Features/Generatcv'
-
+import useDocumentTitle from './useDocumentTitle'
 function App() {
-const [showcv, setshowcv] = useState(false)
+  const [showcv, setshowcv] = useState(false)
+  useDocumentTitle("creat cv")
   return (
     <>
     {

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import img from '../assets/4.png'
 import CenterFocusWeakIcon from '@mui/icons-material/CenterFocusWeak';
-import { data } from "autoprefixer";
+import useDocumentTitle from "../useDocumentTitle";
 
 export default function PersonalInfo({setPersonalData,setcolor}) {
     const [arrow1,setarrow] = useState('')
@@ -28,6 +28,13 @@ export default function PersonalInfo({setPersonalData,setcolor}) {
 useEffect(()=>{
     setPersonalData(data1);
 },[data1,setPersonalData])
+// useEffect(()=>{
+// },[arrow1])
+// if(arrow1 == true){
+    
+    //     useDocumentTitle('Person information');
+    // }
+        useDocumentTitle('Person information');
 
     function handleFileChange(e) {
         const selectedFile = e.target.files[0];

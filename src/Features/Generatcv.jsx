@@ -6,6 +6,7 @@ import WorkExperience from "./WorkExperience"
 import Education from "./Education"
 import Skills from "./Skills"
 import Languages from "./Languages"
+import useDocumentTitle from "../useDocumentTitle"
 
 export default function Generatcv({setshowcv}) {
     const [personalData, setPersonalData] = useState({})
@@ -22,6 +23,7 @@ export default function Generatcv({setshowcv}) {
         console.log(personalData)
     },[personalData])
     const cvComponentRef = useRef(null);
+    useDocumentTitle('Creat CV');
   return (
 <div className="w-full h-screen">
 <Header2 setshowcv={setshowcv} cvComponentRef={cvComponentRef} personalData={personalData}></Header2>
