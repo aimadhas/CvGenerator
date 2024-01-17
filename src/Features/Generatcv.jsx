@@ -6,24 +6,28 @@ import WorkExperience from "./WorkExperience"
 import Education from "./Education"
 import Skills from "./Skills"
 import Languages from "./Languages"
-import useDocumentTitle from "../useDocumentTitle"
+import useLocalStorage from "../Hooks/LocalStorage"
 
 export default function Generatcv({setshowcv}) {
-    const [personalData, setPersonalData] = useState({})
-    const [education, seteducation] = useState([])
-    const [education2, seteducation2] = useState({})
-    const [expirence, setexpirence] = useState([])
-    const [expirence2, setexpirence2] = useState({})
-    const [skils,setskills] = useState([])
-    const [skils1,setskills1]= useState({})
-    const [langue,setlangue] = useState([])
-    const [langue1,setlangue1]= useState({})
-    const [color,setcolor] = useState('#19768d')
-    useEffect(()=>{
-        console.log(personalData)
-    },[personalData])
+    const [personalData, setPersonalData] = useLocalStorage('cv_personalData', {});
+    const [education, seteducation] = useLocalStorage('cv_education', []);
+    const [education2, seteducation2] = useLocalStorage('cv_education2', {});
+    const [expirence, setexpirence] = useLocalStorage('cv_experience', []);
+    const [expirence2, setexpirence2] = useLocalStorage('cv_experience2', {});
+    const [skils, setskills] = useLocalStorage('cv_skills', []);
+    const [skils1, setskills1] = useLocalStorage('cv_skills1', {});
+    const [langue, setlangue] = useLocalStorage('cv_languages', []);
+    const [langue1, setlangue1] = useLocalStorage('cv_languages1', {});
+    const [color, setcolor] = useLocalStorage('cv_color', '#19768d');
+  
+
+
+    useEffect(() => {
+      console.log(personalData);
+    }, [personalData]);
+
+
     const cvComponentRef = useRef(null);
-    useDocumentTitle('Creat CV');
   return (
 <div className="w-full h-screen">
 <Header2 setshowcv={setshowcv} cvComponentRef={cvComponentRef} personalData={personalData}></Header2>
