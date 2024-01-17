@@ -15,6 +15,7 @@ export default function PersonalInfo({ setPersonalData, setcolor }) {
         phone: '',
         adress: ''
     });
+    const title = useDocumentTitle('Person information');
 
 
 
@@ -44,11 +45,13 @@ useEffect(()=>{
 },[data1,setPersonalData])
 // useEffect(()=>{
 // },[arrow1])
-// if(arrow1 == true){
+if(arrow1 == true){
     
-    //     useDocumentTitle('Person information');
-    // }
-        useDocumentTitle('Person information');
+       document.title = title
+    }else{
+        document.title = "Creat Cv"
+    }
+        
 
     function handleFileChange(e) {
         const selectedFile = e.target.files[0];

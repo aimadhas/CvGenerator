@@ -32,7 +32,18 @@ export default function Education({seteducation,seteducation2,education}) {
     })
 const [data2,setdata2] = useState({})
 
-useDocumentTitle('Education');
+
+const title =  useDocumentTitle('Education');
+
+
+if(arrow1 == true){
+    
+    document.title = title
+ }else{
+     document.title = "Creat Cv"
+ }
+
+
     function chnageIcon1(){
         if(arrow1 == false){
             setarrow(true)

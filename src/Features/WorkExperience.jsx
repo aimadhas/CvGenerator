@@ -33,7 +33,21 @@ export default function WorkExperience({setexpirence,setexpirence2,expirence}) {
         Description:'',
     })
 const [data2,setdata2] = useState({})
-useDocumentTitle('Experience')
+const title = useDocumentTitle('Experience')
+
+
+if(arrow1 == true){
+    
+    document.title = title
+ }else{
+     document.title = "Creat Cv"
+ }
+
+
+
+
+
+
 
     function chnageIcon1(){
         if(arrow1 == false){

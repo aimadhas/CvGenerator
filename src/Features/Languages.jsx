@@ -20,7 +20,7 @@ export default function Languages({setlangue,setlangue1,langue}) {
         niveau:'Beginner'
     })
 
-    useDocumentTitle('Language');
+   const title =  useDocumentTitle('Language');
 
     useEffect(()=>{
         setlangue1(data1)
@@ -105,9 +105,12 @@ function deleted(){
 }
 
 
-
-
-
+if(arrow1 == true){
+    
+    document.title = title
+ }else{
+     document.title = "Creat Cv"
+ }
 
 
 
@@ -117,6 +120,7 @@ function deleted(){
             setarrow(true)
         }else{
             setarrow(false)
+            title
         }
     }
   return (

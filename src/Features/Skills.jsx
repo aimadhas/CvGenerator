@@ -52,7 +52,20 @@ function funaddeducation(){
         niveau:'Beginner'
     })
 }
-useDocumentTitle('Skills');
+const title = useDocumentTitle('Skills');
+
+if(arrow1 == true){
+    
+    document.title = title
+ }else{
+     document.title = "Creat Cv"
+ }
+
+
+
+
+
+
 useEffect(() => {
     console.log(listdata1);
 }, [listdata1]);
