@@ -3,7 +3,7 @@ import img from '../assets/4.png'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import DoneIcon from '@mui/icons-material/Done';
 import EditIcon from '@mui/icons-material/Edit';
-
+import useDocumentTitle from "../useDocumentTitle";
 
 export default function Languages({setlangue,setlangue1,langue}) {
     const [arrow1,setarrow] = useState('')
@@ -20,6 +20,7 @@ export default function Languages({setlangue,setlangue1,langue}) {
         niveau:'Beginner'
     })
 
+    useDocumentTitle('Language');
 
     useEffect(()=>{
         setlangue1(data1)

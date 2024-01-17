@@ -3,7 +3,7 @@ import img from '../assets/4.png'
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import DoneIcon from '@mui/icons-material/Done';
 import EditIcon from '@mui/icons-material/Edit';
-
+import useDocumentTitle from "../useDocumentTitle";
 
 
 export default function Skills({setskills,setskills1,skils}) {
@@ -52,7 +52,7 @@ function funaddeducation(){
         niveau:'Beginner'
     })
 }
-
+useDocumentTitle('Skills');
 useEffect(() => {
     console.log(listdata1);
 }, [listdata1]);
