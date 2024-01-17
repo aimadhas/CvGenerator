@@ -38,7 +38,6 @@ export default function Generatcv({setshowcv}) {
         <WorkExperience setexpirence={setexpirence} setexpirence2={setexpirence2} expirence={expirence}></WorkExperience>
         <Skills setskills={setskills} setskills1={setskills1} skils={skils}></Skills>
         <Languages setlangue={setlangue} setlangue1={setlangue1} langue={langue}></Languages>
-           
         </div>
         <div className='w-[50%] h-full bg-[#f4f4f5] py-5 px-5 overflow-y-auto max-h-full'>
             <CV   cvComponentRef={cvComponentRef} personalData={personalData} education={education} education2={education2} skils={skils} skils1={skils1} langue={langue} langue1={langue1} expirence={expirence} expirence2={expirence2} color={color}></CV>
